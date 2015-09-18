@@ -400,7 +400,38 @@
                                             <label>Description</label>
                                             <textarea class="form-control" rows="3"></textarea>
                                         </div>
-                                    
+                                        
+                                        <p>   
+                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Submit</button>
+                                        </p>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Please confirm your New Server Request form.
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="">I accept full responsibility.
+                                                            </label>
+                                                         </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
+                            
+                            
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
