@@ -34,3 +34,27 @@ $(function() {
         element.addClass('active');
     }
 });
+
+
+$('#exaptions').DataTable( {
+     //  bProcessing: true   
+        ajax: {
+            "url": "http://smsk01we32u/_vti_bin/wcfjson/wcfjsonservice.svc/GetData/all",
+           "dataSrc": "GetAllEmployeesMethodResult"
+      },
+        columns: [
+
+                        { width: '10%', data: 'SPID' },
+                        { width: '15%', data: 'AssetName' },
+                        { width: '18%', data: 'PrimaryOwner' },
+                        { width: '19%', data: 'FailedCheck' },
+                        { width: '19%', data: 'Standard' },
+                        { width: '19%', data: 'RiskDefinition' }
+
+                ],
+    bAutoWidth: false,            
+    select: true
+   
+    } );
+// GetAllEmployeesMethodResult
+

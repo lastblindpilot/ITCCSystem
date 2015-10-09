@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Core Infrastructure Engineering</title>
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,8 +17,14 @@
     <!-- MetisMenu CSS -->
     <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
+    <!-- Timeline CSS -->
+    <link href="../css/timeline.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -45,11 +51,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Core Infrastructure Engineering</a>
+                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
             </div>
             <!-- /.navbar-header -->
 
-             <ul class="nav navbar-top-links navbar-right">
+            <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -58,36 +64,36 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>Anton Kapurkin</strong>
+                                    <strong>John Smith</strong>
                                     <span class="pull-right text-muted">
                                         <em>Yesterday</em>
                                     </span>
                                 </div>
-                                <div>Это тестовое сообщение, не обращайте внимания...</div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>Anton Kapurkin</strong>
+                                    <strong>John Smith</strong>
                                     <span class="pull-right text-muted">
                                         <em>Yesterday</em>
                                     </span>
                                 </div>
-                                <div>Второе сообщение от меня за вчера.</div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
                             </a>
                         </li>
                         <li class="divider"></li>
                         <li>
                             <a href="#">
                                 <div>
-                                    <strong>Anton Oreshin</strong>
+                                    <strong>John Smith</strong>
                                     <span class="pull-right text-muted">
                                         <em>Yesterday</em>
                                     </span>
                                 </div>
-                                <div>Turn this off!</div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
                             </a>
                         </li>
                         <li class="divider"></li>
@@ -110,7 +116,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Inventory sync</strong>
+                                        <strong>Task 1</strong>
                                         <span class="pull-right text-muted">40% Complete</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -121,12 +127,12 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="<divide></divide>r"></li>
+                        <li class="divider"></li>
                         <li>
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>DB sync</strong>
+                                        <strong>Task 2</strong>
                                         <span class="pull-right text-muted">20% Complete</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -142,7 +148,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>FS sync</strong>
+                                        <strong>Task 3</strong>
                                         <span class="pull-right text-muted">60% Complete</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -158,7 +164,7 @@
                             <a href="#">
                                 <div>
                                     <p>
-                                        <strong>Cost Allocation sync</strong>
+                                        <strong>Task 4</strong>
                                         <span class="pull-right text-muted">80% Complete</span>
                                     </p>
                                     <div class="progress progress-striped active">
@@ -194,7 +200,7 @@
                             </a>
                         </li>
                         <li class="divider"></li>
-                        <!--<li>
+                        <li>
                             <a href="#">
                                 <div>
                                     <i class="fa fa-twitter fa-fw"></i> 3 New Followers
@@ -202,7 +208,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="divider"></li>-->
+                        <li class="divider"></li>
                         <li>
                             <a href="#">
                                 <div>
@@ -259,10 +265,6 @@
             </ul>
             <!-- /.navbar-top-links -->
 
-
-<!-- SIDEBAR --> 
-
-
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -281,18 +283,89 @@
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Request Forms</a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="flot.html">Flot Charts</a>
+                                </li>
+                                <li>
+                                    <a href="morris.html">Morris.js Charts</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Cost Allocation Reports</a>
-                        </li>    
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        </li>
                         <li>
-                            <a href="SSEFtable.html"><i class="fa fa-table fa-fw"></i> Security Exeptions</a>
-                        </li> 
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        </li>
                         <li>
-                            <a href="CPUflot.html"><i class="fa fa-bar-chart-o fa-fw"></i> Monitoring data</a>
-                        </li>                   
-                     
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="panels-wells.html">Panels and Wells</a>
+                                </li>
+                                <li>
+                                    <a href="buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="notifications.html">Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">Typography</a>
+                                </li>
+                                <li>
+                                    <a href="icons.html"> Icons</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grid</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third Level <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                    </ul>
+                                    <!-- /.nav-third-level -->
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -300,14 +373,10 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-
-<!-- SIDEBAR -->
-
-
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">New Server Request</h1>
+                    <h1 class="page-header">Flot</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -316,99 +385,98 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Core Infrastructure Engineering
+                            Line Chart Example
                         </div>
-                        
+                        <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form role="form">
-                                    
-                                        <div class="form-group">
-                                            <label>Server name</label>
-                                            <input class="form-control">
-                                            <p class="help-block">Please enter the server name.</p>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label>Description</label>
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                        
-                                        <p>   
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Submit</button>
-                                        </p>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Please confirm your New Server Request form.
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="">I accept full responsibility.
-                                                            </label>
-                                                         </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Submit</button>
-                                                    </div>
-                                                </div>
-                                                <!-- /.modal-content -->
-                                            </div>
-                                            <!-- /.modal-dialog -->
-                                        </div>
-                                        <!-- /.modal -->
-                            
-                            
-                                    </form>
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
-                                
-                                
-                                <div class="col-lg-6">
-                                    <form role="form">
-                                    
-                                        <div class="form-group">
-                                            <label>Primary role</label>
-                                            <input class="form-control">
-                                            <p class="help-block">Please enter the server primary role.</p>
-                                        </div>
-                                    
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">@</span>
-                                            <input type="text" class="form-control" placeholder="Primary owner">
-                                        </div>
-                                        <div class="form-group input-group">
-                                            <span class="input-group-addon">@</span>
-                                            <input type="text" class="form-control" placeholder="Secondary owner">
-                                        </div>
-                                    
-                                    
-                                    </form>       
-                                </div>
-                                <!-- /.col-lg-6 (nested) -->
-                                
-                                
-                                
+                            <div class="flot-chart">
+                                <div class="flot-chart-content" id="flot-line-chart"></div>
                             </div>
-                            <!-- /.row (nested) -->
                         </div>
                         <!-- /.panel-body -->
-                        
-                        
-                        
-                        
-                        
                     </div>
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-12 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Pie Chart Example
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="flot-chart">
+                                <div class="flot-chart-content" id="flot-pie-chart"></div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Multiple Axes Line Chart Example
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="flot-chart">
+                                <div class="flot-chart-content" id="flot-line-chart-multi"></div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Moving Line Chart Example
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="flot-chart">
+                                <div class="flot-chart-content" id="flot-line-chart-moving"></div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Bar Chart Example
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="flot-chart">
+                                <div class="flot-chart-content" id="flot-bar-chart"></div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Flot Charts Usage
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <p>Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks, and interactive features. In SB Admin, we are using the most recent version of Flot along with a few plugins to enhance the user experience. The Flot plugins being used are the tooltip plugin for hoverable tooltips, and the resize plugin for fully responsive charts. The documentation for Flot Charts is available on their website, <a target="_blank" href="http://www.flotcharts.org/">http://www.flotcharts.org/</a>.</p>
+                            <a target="_blank" class="btn btn-default btn-lg btn-block" href="http://www.flotcharts.org/">View Flot Charts Documentation</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-6 -->
             </div>
             <!-- /.row -->
         </div>
@@ -425,6 +493,15 @@
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Flot Charts JavaScript -->
+    <script src="../bower_components/flot/excanvas.min.js"></script>
+    <script src="../bower_components/flot/jquery.flot.js"></script>
+    <script src="../bower_components/flot/jquery.flot.pie.js"></script>
+    <script src="../bower_components/flot/jquery.flot.resize.js"></script>
+    <script src="../bower_components/flot/jquery.flot.time.js"></script>
+    <script src="../bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="../js/flot-data.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>

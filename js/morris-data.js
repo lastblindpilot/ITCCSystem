@@ -4,58 +4,58 @@ $(function() {
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',
-            iphone: 2666,
-            ipad: null,
-            itouch: 2647
+            allocated: 2666,
+            tasks: null,
+            done: 2647
         }, {
             period: '2010 Q2',
-            iphone: 2778,
-            ipad: 2294,
-            itouch: 2441
+            allocated: 2778,
+            tasks: 2294,
+            done: 2441
         }, {
             period: '2010 Q3',
-            iphone: 4912,
-            ipad: 1969,
-            itouch: 2501
+            allocated: 4912,
+            tasks: 1969,
+            done: 2501
         }, {
             period: '2010 Q4',
-            iphone: 3767,
-            ipad: 3597,
-            itouch: 5689
+            allocated: 3767,
+            tasks: 3597,
+            done: 5689
         }, {
             period: '2011 Q1',
-            iphone: 6810,
-            ipad: 1914,
-            itouch: 2293
+            allocated: 6810,
+            tasks: 1914,
+            done: 2293
         }, {
             period: '2011 Q2',
-            iphone: 5670,
-            ipad: 4293,
-            itouch: 1881
+            allocated: 5670,
+            tasks: 4293,
+            done: 1881
         }, {
             period: '2011 Q3',
-            iphone: 4820,
-            ipad: 3795,
-            itouch: 1588
+            allocated: 4820,
+            tasks: 3795,
+            done: 1588
         }, {
             period: '2011 Q4',
-            iphone: 15073,
-            ipad: 5967,
-            itouch: 5175
+            allocated: 15073,
+            tasks: 5967,
+            done: 5175
         }, {
             period: '2012 Q1',
-            iphone: 10687,
-            ipad: 4460,
-            itouch: 2028
+            allocated: 10687,
+            tasks: 4460,
+            done: 2028
         }, {
             period: '2012 Q2',
-            iphone: 8432,
-            ipad: 5713,
-            itouch: 1791
+            allocated: 8432,
+            tasks: 5713,
+            done: 1791
         }],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['allocated', 'tasks', 'done'],
+        labels: ['allocated', 'tasks', 'done'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true
@@ -64,13 +64,13 @@ $(function() {
     Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
-            label: "Download Sales",
+            label: "In progress",
             value: 12
         }, {
-            label: "In-Store Sales",
+            label: "Recertified",
             value: 30
         }, {
-            label: "Mail-Order Sales",
+            label: "Not recertified",
             value: 20
         }],
         resize: true
