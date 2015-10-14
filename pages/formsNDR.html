@@ -306,7 +306,7 @@
                             <!-- /.nav-second-level -->
                         </li>                       
                         <li>
-                           <a href="flot.html"><i class="fa fa-bar-chart-o fa-fw"></i> Monitoring data</a>
+                            <a href="flot.html"><i class="fa fa-bar-chart-o fa-fw"></i> Monitoring data</a>
                         </li>                           
 <!-- /navigation -->                 
                     </ul>
@@ -323,11 +323,12 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">New Server Request</h1>
+                    <h1 class="page-header">New Database Request</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
-            <!-- /.row -->
+            <!-- /.row -->     
+            <!-- General info -->       
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
@@ -337,55 +338,23 @@
                         
                         <div class="panel-body">
                             <div class="row">
+                                
                                 <div class="col-lg-6">
                                     <form role="form">
                                     
                                         <div class="form-group">
-                                            <label>Server name</label>
+                                            <label>Database name</label>
                                             <input class="form-control">
-                                            <p class="help-block">Please enter the server name.</p>
-                                        </div>
-                                        
+                                            <p class="help-block">Please enter the database name.</p>
+                                        </div>     
                                         <div class="form-group">
-                                            <label>Description</label>
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                        
-                                        <p>   
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Submit</button>
-                                        </p>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                        <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Please confirm your New Server Request form.
-                                                        <div class="checkbox">
-                                                            <label>
-                                                                <input type="checkbox" value="">I accept full responsibility.
-                                                            </label>
-                                                         </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Submit</button>
-                                                    </div>
-                                                </div>
-                                                <!-- /.modal-content -->
-                                            </div>
-                                            <!-- /.modal-dialog -->
-                                        </div>
-                                        <!-- /.modal -->
-                            
-                            
+                                            <label for="collation">Collation</label>
+                                            <input class="form-control" id="collation" type="text" placeholder="Collation is not used" disabled>
+                                            <!-- <textarea class="form-control" rows="3"></textarea> -->
+                                        </div>                      
                                     </form>
                                 </div>
                                 <!-- /.col-lg-6 (nested) -->
-                                
                                 
                                 <div class="col-lg-6">
                                     <form role="form">
@@ -404,29 +373,130 @@
                                             <span class="input-group-addon">@</span>
                                             <input type="text" class="form-control" placeholder="Secondary owner">
                                         </div>
-                                    
-                                    
                                     </form>       
                                 </div>
-                                <!-- /.col-lg-6 (nested) -->
-                                
-                                
-                                
+                                <!-- /.col-lg-6 (nested) -->    
                             </div>
                             <!-- /.row (nested) -->
                         </div>
-                        <!-- /.panel-body -->
-                        
-                        
-                        
-                        
-                        
+                        <!-- /.panel-body -->  
                     </div>
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
+            <!-- /General info -->
+            
+            <!-- tech info -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Technical section
+                        </div>
+                        
+                        <div class="panel-body">
+                            <div class="row">
+                                
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                    
+                                        <div class="form-group">
+                                            <label>Instance</label>
+                                            <input class="form-control">
+                                            <p class="help-block">Please enter the Instance name.</p>
+                                        </div> 
+                                        <div class="form-group">
+                                            <label>Select database type</label>
+                                            <select class="form-control">
+                                                <option>MSSQL</option>
+                                                <option>Oracle</option>
+                                                <option>MySQL</option>
+                                                <option>PostgreSQL</option>
+                                                <option>NoSQL solutions</option>
+                                            </select>
+                                        </div>
+            
+                                    </form>
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->   
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                    
+                                        <div class="form-group">
+                                            <label>Primary role</label>
+                                            <select class="form-control">
+                                                <option>PROD</option>
+                                                <option>DEV</option>
+                                                <option>UAT</option>
+                                                <option>TEST</option>
+                                            </select>
+                                        </div>
+                  
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon"><i class="fa fa-eur"></i>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="CAPEX">
+                                        </div>
+                                        <div class="form-group input-group">
+                                            <span class="input-group-addon">$</span>
+                                            <input type="text" class="form-control" placeholder="OPEX">
+                                            <span class="input-group-addon">.00</span>
+                                        </div>          
+                                    </form>       
+                                </div>
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            
+            <!-- /tech info -->
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>   
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Submit</button>
+                   <button type="reset" class="btn btn-default">Reset</button>
+                   </p>
+                                        
+                   
+                     <!-- Modal -->
+                                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel">Confirmation</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Please confirm your New Database Request form.
+                                                        <div class="checkbox">
+                                                            <label>
+                                                                <input type="checkbox" value="">I accept full responsibility.
+                                                            </label>
+                                                         </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Submit</button>
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                            </div>
+                                            <!-- /.modal-dialog -->
+                                        </div>
+                                        <!-- /.modal -->
+                </div>
+            </div>
+            
+            
         </div>
         <!-- /#page-wrapper -->
 
