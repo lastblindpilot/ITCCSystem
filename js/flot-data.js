@@ -1056,7 +1056,7 @@ $(function() {
     function doPlot(position) {
         $.plot($("#flot-line-chart-multi"), [{
             data: oilprices,
-            label: "Oil price ($)"
+            label: "Savings ($)"
         }, {
             data: exchangerates,
             label: "USD/EUR exchange rate",

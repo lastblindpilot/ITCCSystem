@@ -58,3 +58,22 @@ $('#exaptions').DataTable( {
     } );
 // GetAllEmployeesMethodResult
 
+
+$('#servers').DataTable( {
+     //  bProcessing: true   
+        ajax: {
+            "url": "http://smsk01we32u/_vti_bin/SPWcfExample/OrderService.svc/GetServers",
+           "dataSrc": "GetAllServersResult"
+      },
+        columns: [
+
+                        { width: '10%', data: 'Name' },
+                        { width: '15%', data: 'PrimaryRole' },
+                        { width: '18%', data: 'PrimaryOwner' },
+                        { width: '19%', data: 'SecondaryOwner' }
+                ],
+    bAutoWidth: false,            
+    select: true
+   
+    } );
+
