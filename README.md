@@ -1,1 +1,1 @@
-## draft for admin panel
+## draft of admin panel
